@@ -43,3 +43,9 @@ img {
     transform: scale(1.06);
     z-index: 1000;
 }
+
+.msg {
+    font-size: 2rem;
+    height: 100%;
+
+}

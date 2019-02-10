@@ -12,7 +12,7 @@
             <div class="pbp-article-list">
 
                 <div class="pbp-article-li" v-for="game in games">
-                    <a tabindex="-1" class="pbp-article-thumbnail" v-on:click="nav" v-bind:data-href="game.path">
+                    <a v-if="game.thumb" tabindex="-1" class="pbp-article-thumbnail" v-on:click="nav" v-bind:data-href="game.path">
                         <div class="pbp-article-thumbnail">
                             <div class="glass-card">
                                 <div class="glass-card-ratio">
@@ -23,6 +23,9 @@
                             </div>
                         </div>
                     </a>
+                    <div v-else class="msg" v-html="game.msg">
+                        <div class="glass-card-ratio"></div>
+                    </div>
                 </div>
 
             </div>
