@@ -1,4 +1,5 @@
 :root {
+    overflow: hidden;
     --clh-white: #dbdbdb;
     --clh-black: #101114;
     --clh-purple: #200a5f;
