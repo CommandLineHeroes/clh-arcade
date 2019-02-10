@@ -1,6 +1,6 @@
 # Command Line Heroes ARCADE!
 
-This is a game switcher for the Command Line Heroes cabs.
+This is a game switcher for the Command Line Heroes arcade cabinets.
 
 ## Step 0: initial setup
 
