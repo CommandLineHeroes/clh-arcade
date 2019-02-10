@@ -13,6 +13,14 @@ let arcadeApp = new Vue({
         toList: function(ev) {
             ev.preventDefault();
             this.url = this.listPage;
+            this.getIframe().contentWindow.location = this.url;
+        },
+        frameLoad: function(ev) {
+            console.log('frame loaded');
+            this.url = this.getIframe().contentWindow.location.href;
+        },
+        getIframe: function() {
+            return document.querySelector('.arcade-iframe');
         }
     },
     watch: {
@@ -26,7 +34,3 @@ let arcadeApp = new Vue({
         document.body.classList.add("ready");
     }
 });
-
-window.nav = (url) => {
-    arcadeApp.url = url;
-};

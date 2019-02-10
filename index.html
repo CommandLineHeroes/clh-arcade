@@ -15,7 +15,7 @@
                 v-bind:class="{ hidden: onList }">
                 <a v-on:click="toList" class="shimmer"><i class="fas fa-th"></i>BACK</a>
             </aside>
-            <iframe class="arcade-iframe" v-bind:src="url" frameborder="0"></iframe>
+            <iframe class="arcade-iframe" src="list.html" v-on:load="frameLoad" frameborder="0"></iframe>
         </div>
         <script type=module src="arcade.js"></script>
     </body>

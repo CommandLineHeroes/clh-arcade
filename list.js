@@ -10,7 +10,7 @@ let listApp = new Vue({
             ev.preventDefault();
 
             let url = ev.currentTarget.getAttribute('data-href');
-            window.top.nav(url)
+            window.location = url;
         },
         populateGames: async function() {
             this.games = await fetch("games.json").then(rsp => rsp.json());
