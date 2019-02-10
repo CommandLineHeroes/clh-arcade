@@ -1,0 +1,14 @@
+:root {
+    --clh-white: #dbdbdb;
+    --clh-black: #101114;
+    --clh-purple: #200a5f;
+    --clh-purple-light: #6b45a0;
+    --clh-yellow: #f4be4a;
+    --clh-yellow-light: #f7cf78;
+    --clh-orange: #ef702b;
+    --clh-orange-light: #f7a060;
+    --clh-blue: #00a9e0;
+    --clh-blue-light: #68cceb;
+
+    --title-reveal-interval: 600ms;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Command Line Heroes ARCADE</title>
+        <link rel="stylesheet" href="list.css">
+    </head>
+    <body>
+        <div id="arcade-list-container">
+            <ul v-for="game in games">
+                <li>
+                    <a v-on:click="nav" v-bind:data-href="game.path">{{ game.name }}
+                    <br>
+                    <img v-bind:src="game.thumb" >
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script type=module src="list.js"></script>
+    </body>
+</html>
+

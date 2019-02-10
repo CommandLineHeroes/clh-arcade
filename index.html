@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Command Line Heroes ARCADE</title>
+        <link rel="stylesheet" href="arcade.css">
+        <link rel="stylesheet" href="fontawesome.css">
+    </head>
+    <body>
+        <h1 class="shimmer">CLH ARCADE</h1>
+        <div id="arcade-container">
+            <aside
+                class="to-menu"
+                v-on:click="toList"
+                v-bind:class="{ hidden: onList }">
+                <a v-on:click="toList" class="shimmer"><i class="fas fa-th"></i>MENU</a>
+            </aside>
+            <iframe class="arcade-iframe" v-bind:src="url" frameborder="0"></iframe>
+        </div>
+        <script type=module src="arcade.js"></script>
+    </body>
+</html>

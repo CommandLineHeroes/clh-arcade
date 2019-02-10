@@ -1,0 +1,34 @@
+@import "preset.css";
+@import "palette.css";
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--clh-black);
+    color: var(--clh-white);
+    opacity: 0;
+    transition: opacity ease-out 1s;
+}
+
+/* my body is ready */
+body.ready {
+    opacity: 1;
+}
+
+a {
+    color: var(--clh-orange-light);
+}
+
+a:visited {
+    color: var(--clh-orange);
+}
+
+#arcade-list-container {
+}
+
+img {
+    width: 100px;
+}

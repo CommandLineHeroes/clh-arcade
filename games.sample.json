@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Command Line Heroes: BASH",
+        "path": "games/clh-bash",
+        "thumb": "games/clh-bash/thumb.png"
+    },
+    {
+        "name": "Game 1",
+        "path": "games/game-1",
+        "thumb": "games/game-1/thumb.png"
+    },
+    {
+        "name": "Game 2",
+        "path": "games/game-2",
+        "thumb": "games/game-2/thumb.png"
+    }
+]

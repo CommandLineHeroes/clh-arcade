@@ -1,0 +1,52 @@
+@import "palette.css";
+@import "fonts/overpass.css";
+@import "shimmer.css";
+
+html, body, #arcade-container, .arcade-iframe {
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clh-black);
+    color: var(--clh-white);
+    font-family: "overpass";
+}
+.to-menu {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    opacity: 1;
+}
+.to-menu a {
+    display: block;
+
+    cursor: pointer;
+
+    /* color: var(--clh-yellow); */
+    text-decoration: none;
+    font-weight: bold;
+
+    /* background: var(--clh-black); */
+    /* opacity: 0.4; */
+
+    transition: opacity linear 200ms, transform ease-out 500ms;
+
+    transform-origin: left bottom;
+    transform: scale(2.0);
+}
+.to-menu a:hover {
+    opacity: 0.8;
+}
+.to-menu a svg {
+    height: 0.85em;
+    position: relative;
+    top: -1px;
+    margin-right: 1px;
+}
+.to-menu.hidden a {
+    opacity: 0;
+    transform: scale(0);
+}
+
