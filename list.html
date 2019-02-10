@@ -8,14 +8,25 @@
     </head>
     <body>
         <div id="arcade-list-container">
-            <ul v-for="game in games">
-                <li>
-                    <a v-on:click="nav" v-bind:data-href="game.path">{{ game.name }}
-                    <br>
-                    <img v-bind:src="game.thumb" >
+
+            <div class="pbp-article-list">
+
+                <div class="pbp-article-li" v-for="game in games">
+                    <a tabindex="-1" class="pbp-article-thumbnail" v-on:click="nav" v-bind:data-href="game.path">
+                        <div class="pbp-article-thumbnail">
+                            <div class="glass-card">
+                                <div class="glass-card-ratio">
+                                    <img class="glass-card-bg glass-card-bg-default" v-bind:src="game.thumb">
+                                    <div class="glass-card-border-outer"></div>
+                                    <div class="glass-card-border-inner"></div>
+                                </div>
+                            </div>
+                        </div>
                     </a>
-                </li>
-            </ul>
+                </div>
+
+            </div>
+
         </div>
         <script type=module src="list.js"></script>
     </body>

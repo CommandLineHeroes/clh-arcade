@@ -1,5 +1,6 @@
 @import "preset.css";
 @import "palette.css";
+@import "clayto.css";
 
 html, body {
     width: 100%;
@@ -31,4 +32,14 @@ a:visited {
 
 img {
     width: 100px;
+}
+
+.pbp-article-thumbnail {
+    transition: transform ease-out 180ms;
+    z-index: 100;
+    position: relative;
+}
+.pbp-article-thumbnail:hover {
+    transform: scale(1.06);
+    z-index: 1000;
 }
