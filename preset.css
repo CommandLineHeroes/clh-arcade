@@ -18,7 +18,6 @@ A simple CSS preset to enable box-sizing, set some text rendering options to dec
 */
 
 * {
-  overflow: hidden;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,12 +26,10 @@ A simple CSS preset to enable box-sizing, set some text rendering options to dec
 }
 
 html {
-  overflow: hidden;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  overflow: hidden;
   margin: 0;
 }

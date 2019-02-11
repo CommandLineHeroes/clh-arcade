@@ -1,7 +1,6 @@
 /* This is a hacky copy of some CSS from my site, clayto.com */
 
 .pbp-article-list {
-    overflow: hidden;
     margin: 27px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(480px,1fr));
@@ -33,11 +32,9 @@
     }
 }
 .pbp-article-li .pbp-article-thumbnail {
-    overflow: hidden;
     margin: 0;
 }
 .pbp-article-li:last-child {
-    overflow: hidden;
     margin-bottom: 0;
 }
 .glass-card {
@@ -46,12 +43,10 @@
     box-shadow: 0 1px 3px rgba(0,0,0,.4),0 1px 10px rgba(0,0,0,.2);
 }
 .glass-card .glass-card-ratio {
-    overflow: hidden;
     padding-top: 80%;
     position: relative;
 }
 .glass-card .glass-card-ratio .glass-card-link {
-    overflow: hidden;
     z-index: 20;
     position: absolute;
     width: calc(100% - 0px);
@@ -60,7 +55,6 @@
     left: 0;
 }
 .glass-card .glass-card-ratio .glass-card-title {
-    overflow: hidden;
     color: #f1f1f1;
     position: absolute;
     z-index: 10;
@@ -75,7 +69,6 @@
     word-wrap: break-word;
 }
 .glass-card .glass-card-ratio .glass-card-title::after {
-    overflow: hidden;
     z-index: -1;
     position: absolute;
     width: calc(100% - 0px);
@@ -87,7 +80,6 @@
     box-shadow: 0 0 4px 0 rgba(0,0,0,.55);
 }
 .glass-card .glass-card-ratio .glass-card-border-outer {
-    overflow: hidden;
     z-index: 10;
     position: absolute;
     width: calc(100% - 0px);
@@ -97,7 +89,6 @@
     border: 2px solid #000;
 }
 .glass-card .glass-card-ratio .glass-card-border-outer:before {
-    overflow: hidden;
     content: " ";
     position: absolute;
     z-index: -1;
@@ -108,7 +99,6 @@
     border: 1px solid rgba(255,255,255,.1);
 }
 .glass-card .glass-card-ratio .glass-card-border-inner {
-    overflow: hidden;
     z-index: 15;
     position: absolute;
     width: calc(100% - 0px);
@@ -121,7 +111,6 @@
     transition: opacity linear 40ms;
 }
 .glass-card .glass-card-ratio .glass-card-bg {
-    overflow: hidden;
     z-index: 1;
     position: absolute;
     width: calc(100% - 0px);
@@ -135,6 +124,5 @@
     transition: transform ease-out 0.3s;
 }
 .glass-card .glass-card-ratio:hover .glass-card-border-inner {
-    overflow: hidden;
     opacity: 0.9;
 }

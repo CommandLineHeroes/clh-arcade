@@ -14,7 +14,6 @@ html, body, #arcade-container, .arcade-iframe {
     font-family: "overpass";
 }
 .to-menu {
-    overflow: hidden;
     position: absolute;
     left: 5px;
     bottom: 5px;
@@ -30,7 +29,6 @@ html, body, #arcade-container, .arcade-iframe {
     transform: scale(1.6);
 }
 .to-menu a {
-    overflow: hidden;
     display: block;
 
     cursor: pointer;
@@ -43,12 +41,10 @@ html, body, #arcade-container, .arcade-iframe {
     /* opacity: 0.4; */
 }
 .to-menu:hover {
-    overflow: hidden;
     transform: scale(2.0);
     opacity: 1;
 }
 .to-menu a .fas {
-    overflow: hidden;
     display: inline !important;
     height: 0.85em;
     font-size: 0.8em;
@@ -58,11 +54,9 @@ html, body, #arcade-container, .arcade-iframe {
     margin-right: 1px;
 }
 .to-menu.hidden {
-    overflow: hidden;
     opacity: 0;
 }
 .to-menu.hidden {
-    overflow: hidden;
     opacity: 0;
     transform: scale(0);
 }

@@ -1,5 +1,4 @@
 .shimmer {
-    overflow: hidden;
     text-align: center;
     color: rgba(255,255,255,0.5);
     background: -webkit-gradient(linear, left top, right top, from(#222222ee), to(#222222ee), color-stop(0.5, #ffffffee));
