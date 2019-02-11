@@ -36,9 +36,13 @@ games
 
 ## Step 2: create game metadata
 
-Create `games.json`.
+Create `games.json` or symlink it from elsewhere.
 
     cp games.sample.json games.json
+
+Or:
+
+    ln -s ../path-to-games/games.json games.json
 
 Edit the sample, creating one entry for each game.
 
