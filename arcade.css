@@ -51,7 +51,7 @@ html, body, #arcade-container, .arcade-iframe {
     vertical-align: 1px;
     /* position: relative; */
     /* top: -1px; */
-    margin-right: 3px;
+    margin-right: 2.5px;
 }
 .to-menu.hidden {
     opacity: 0;
