@@ -16,10 +16,13 @@ Or if you're developing, run:
 
 The only difference is that `dev` includes browser-sync.
 
-## Step 1: copy your games into `games/`
+## Step 1: create `games/`
 
-Copy each game you want to add to the switcher into `games/`.  For example:
+Create a symlink named `games` that points to a directory containing all the games.
 
+    ln -s ../path-to-games games
+
+The games dir should have the following format.  See [clh-arcade-think](https://github.com/CommandLineHeroes/clh-arcade-think) for an example.
 ```
 games
 ├── game-1
@@ -31,7 +34,7 @@ games
 ```
 *Note: the thumbnails do not have to be in the game directories.*
 
-## Step 2: 
+## Step 2: create game metadata
 
 Create `games.json`.
 
