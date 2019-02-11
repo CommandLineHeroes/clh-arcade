@@ -29,6 +29,14 @@ let arcadeApp = new Vue({
         frameLoad: function(ev) {
             this.url = this.getIframeWindow().location.href;
             this.injectUserActionEvents();
+
+            if (/fleshgod/i.test(this.url)) {
+                console.log('doing fleshgod stuff');
+                const fleshgodStyles = document.createElement('style');
+                fleshgodStyles.rel = 'stylesheet';
+                fleshgodStyles.innerHTML = 'html, body, canvas { height: 100%; margin: 0; padding: 0 } #canvas { margin: 0 auto; display: block; }';
+                this.getIframeWindow().document.body.appendChild(fleshgodStyles);
+            }
         },
         getIframeWindow: function() {
             return document.querySelector('.arcade-iframe').contentWindow;
@@ -60,7 +68,6 @@ let arcadeApp = new Vue({
             return this.idleFor() > IDLE_TIMEOUT;
         },
         userAction: function() {
-            console.log("user action detected, resetting idle timer");
             this.lastKeypressTime = performance.now();
         },
         injectUserActionEvents: function() {
