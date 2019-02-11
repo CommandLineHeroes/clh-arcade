@@ -10,7 +10,18 @@ let listApp = new Vue({
             ev.preventDefault();
 
             let url = ev.currentTarget.getAttribute('data-href');
-            window.location = url;
+
+            let isRemote = /^http/.test(url);
+
+
+            if (isRemote) {
+                let proxyUrl = url.replace(/^https?:\/\//, 'http://localhost:1337/');
+                console.log(`navigating to ${proxyUrl}`);
+                window.location = proxyUrl;
+            }
+            else {
+                window.location = url;
+            }
         },
         populateGames: async function() {
             this.games = await fetch("games.json").then(rsp => rsp.json());

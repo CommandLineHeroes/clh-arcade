@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -o",
+    "start": "npm run proxy & http-server -p 8080 & opn http://localhost:1337/localhost:8080/",
+    "proxy": "CORSPROXY_MAX_PAYLOAD=40485760 corsproxy",
     "dev": "browser-sync ./ -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +16,9 @@
     "browser-sync": "^2.26.3"
   },
   "dependencies": {
+    "corsproxy": "^1.5.0",
     "http-server": "^0.11.1",
+    "opn-cli": "^4.0.0",
     "vue": "^2.6.4"
   }
 }
