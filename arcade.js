@@ -37,6 +37,15 @@ let arcadeApp = new Vue({
                 fleshgodStyles.innerHTML = 'html, body, canvas { height: 100%; margin: 0; padding: 0 } #canvas { margin: 0 auto; display: block; }';
                 this.getIframeWindow().document.body.appendChild(fleshgodStyles);
             }
+            else if (/1082033/i.test(this.url)) {
+                // spam tower spam
+                const height = this.getIframeWindow().innerHeight;
+                console.log('doing fleshgod stuff');
+                const fleshgodStyles = document.createElement('style');
+                fleshgodStyles.rel = 'stylesheet';
+                fleshgodStyles.innerHTML = `html, body { height: 100%; } #canvas { height: ${height}px }`;
+                this.getIframeWindow().document.body.appendChild(fleshgodStyles);
+            }
         },
         getIframeWindow: function() {
             return document.querySelector('.arcade-iframe').contentWindow;
