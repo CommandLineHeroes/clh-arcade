@@ -21,6 +21,7 @@ body.ready {
 
 a {
     color: var(--clh-orange-light);
+    cursor: pointer;
 }
 
 a:visited {
