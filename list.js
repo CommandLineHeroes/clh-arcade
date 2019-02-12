@@ -13,14 +13,13 @@ let listApp = new Vue({
 
             let isRemote = /^http/.test(url);
 
-
             if (isRemote) {
                 let proxyUrl = url.replace(/^https?:\/\//, 'http://localhost:1337/');
-                console.log(`navigating to ${proxyUrl}`);
                 window.location = proxyUrl;
             }
             else {
-                window.location = url;
+                let nonProxyUrl = location.href.replace(/\/[^/]*$/, '/') + url + '/';
+                window.location = nonProxyUrl;
             }
         },
         populateGames: async function() {
