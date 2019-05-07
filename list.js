@@ -13,6 +13,12 @@ let listApp = new Vue({
 
             let isRemote = /^http/.test(url);
 
+            console.log('list.nav clicked: ', url, isRemote);
+
+            // send click event to google analytics
+            window.ga('send', 'event', 'games', 'play', url);
+
+
             if (isRemote) {
                 let proxyUrl = url.replace(/^https?:\/\//, 'http://localhost:1337/');
                 window.location = proxyUrl;
