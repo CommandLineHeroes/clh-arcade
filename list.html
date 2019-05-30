@@ -31,7 +31,9 @@
                             </div>
                         </div>
                     </a>
-                    <div v-else class="msg" v-html="game.msg">
+                    <div v-else class="msg" >
+			<h1>{{ game.title }}</h1>
+			<div v-html="game.msg"></div>
                         <div class="glass-card-ratio"></div>
                     </div>
                 </div>
