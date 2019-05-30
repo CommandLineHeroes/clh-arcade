@@ -20,7 +20,8 @@ let listApp = new Vue({
 
 
             if (isRemote) {
-                let proxyUrl = url.replace(/^https?:\/\//, 'http://localhost:1337/');
+                let proxyUrl = url.replace(/^https?:\/\//, `${location.origin}/`);
+		console.log(`game hosted at remote URL, proxying via ${proxyUrl}`);
                 window.location = proxyUrl;
             }
             else {
