@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run proxy & http-server -p 8080",
+    "start": "npm run proxy & http-server -p 8765",
     "proxy": "CORSPROXY_MAX_PAYLOAD=40485760 CORSPROXY_HOST=127.0.0.1 CORSPROXY_PORT=1234 corsproxy",
     "http": "http-server -p 8765",
     "dev": "browser-sync ./ -w",
