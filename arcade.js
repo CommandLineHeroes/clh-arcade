@@ -30,20 +30,38 @@ let arcadeApp = new Vue({
             this.url = this.getIframeWindow().location.href;
             this.injectUserActionEvents();
 
+		console.log('FRAME LOADED: ',this.url);
+
             if (/fleshgod/i.test(this.url)) {
-                console.log('doing fleshgod stuff');
+		    console.log('fleshgod');
                 const fleshgodStyles = document.createElement('style');
                 fleshgodStyles.rel = 'stylesheet';
                 fleshgodStyles.innerHTML = 'html, body, canvas { height: 100%; margin: 0; padding: 0 } #canvas { margin: 0 auto; display: block; }';
                 this.getIframeWindow().document.body.appendChild(fleshgodStyles);
             }
+            else if (/Nuclear_Briefcase_HTML/i.test(this.url)) {
+		    console.log('nuclear briefcase');
+                const height = this.getIframeWindow().innerWidth;
+                const fleshgodStyles = document.createElement('style');
+                fleshgodStyles.rel = 'stylesheet';
+                fleshgodStyles.innerHTML = `html, body { height: 100%; } #canvas { width: ${height}px }`;
+                this.getIframeWindow().document.body.appendChild(fleshgodStyles);
+            }
             else if (/1082033/i.test(this.url)) {
+		    console.log('spam tower spam');
                 // spam tower spam
                 const height = this.getIframeWindow().innerHeight;
-                console.log('doing fleshgod stuff');
                 const fleshgodStyles = document.createElement('style');
                 fleshgodStyles.rel = 'stylesheet';
                 fleshgodStyles.innerHTML = `html, body { height: 100%; } #canvas { height: ${height}px }`;
+                this.getIframeWindow().document.body.appendChild(fleshgodStyles);
+            }
+            else if (/ransom/i.test(this.url)) {
+		    console.log('ransom');
+                const width = this.getIframeWindow().innerWidth;
+                const fleshgodStyles = document.createElement('style');
+                fleshgodStyles.rel = 'stylesheet';
+                fleshgodStyles.innerHTML = `html, body { height: 100%; overflow: hidden; } canvas { width: ${width}px; }`;
                 this.getIframeWindow().document.body.appendChild(fleshgodStyles);
             }
         },
