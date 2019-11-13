@@ -4,9 +4,11 @@ import "./node_modules/@patternfly/pfe-cta/dist/pfe-cta.min.js";
 import "./node_modules/@patternfly/pfe-number/dist/pfe-number.min.js";
 import "./node_modules/@patternfly/pfe-card/dist/pfe-card.min.js";
 
+            const gamesWebroot = `http://localhost:8766`;
+
 PfeIcon.addIconSet(
   "far",
-  "/icons/font-awesome/regular",
+  `${gamesWebroot}/icons/font-awesome/regular`,
   (iconName, setName, path) => {
     const name = iconName.replace("far-", "");
     return `${path}/${name}.svg`;
@@ -15,7 +17,7 @@ PfeIcon.addIconSet(
 
 PfeIcon.addIconSet(
   "fas",
-  "/icons/font-awesome/solid",
+  `${gamesWebroot}/icons/font-awesome/solid`,
   (iconName, setName, path) => {
     const name = iconName.replace("fas-", "");
     return `${path}/${name}.svg`;
@@ -24,7 +26,7 @@ PfeIcon.addIconSet(
 
 PfeIcon.addIconSet(
   "fab",
-  "/icons/font-awesome/brands",
+  `${gamesWebroot}/icons/font-awesome/brands`,
   (iconName, setName, path) => {
     const name = iconName.replace("fab-", "");
     return `${path}/${name}.svg`;
@@ -68,7 +70,6 @@ let listApp = new Vue({
             }
         },
         populateGames: async function() {
-            const gamesWebroot = `http://localhost:8766`;
             const gamesJsonUrl = `${gamesWebroot}/games.json`;
             this.games = await fetch(gamesJsonUrl).then(rsp => rsp.json());
             this.games.forEach(game => {
