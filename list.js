@@ -68,7 +68,8 @@ let listApp = new Vue({
             }
         },
         populateGames: async function() {
-            this.games = await fetch(`${location.href.replace('8765', '8766')}/games.json`).then(rsp => rsp.json());
+            const gamesJsonUrl = `${location.protocol}//${location.host.replace('8765', '8766')}/games.json`;
+            this.games = await fetch(gamesJsonUrl).then(rsp => rsp.json());
 		console.log(this.games)
         }
     },
