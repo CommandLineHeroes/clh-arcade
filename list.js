@@ -1,8 +1,8 @@
 import Vue from "./node_modules/vue/dist/vue.esm.browser.min.js";
-import PfeIcon from "./node_modules/@patternfly/pfe-icon/dist/pfe-icon.min.js";
-import "./node_modules/@patternfly/pfe-cta/dist/pfe-cta.min.js";
-import "./node_modules/@patternfly/pfe-number/dist/pfe-number.min.js";
-import "./node_modules/@patternfly/pfe-card/dist/pfe-card.min.js";
+import PfeIcon from "./node_modules/@patternfly/pfe-icon/pfe-icon.min.js";
+import "./node_modules/@patternfly/pfe-cta/pfe-cta.min.js";
+import "./node_modules/@patternfly/pfe-number/pfe-number.min.js";
+import "./node_modules/@patternfly/pfe-card/pfe-card.min.js";
 
 const gamesWebroot = `http://localhost:8766`;
 
