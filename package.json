@@ -21,6 +21,7 @@
     "browser-sync": "^2.26.3"
   },
   "dependencies": {
+    "@patternfly/pfelement": "1.0.0-prerelease.24",
     "@patternfly/pfe-card": "1.0.0-prerelease.24",
     "@patternfly/pfe-cta": "1.0.0-prerelease.24",
     "@patternfly/pfe-icon": "1.0.0-prerelease.24",
