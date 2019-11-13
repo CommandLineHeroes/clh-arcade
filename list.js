@@ -68,8 +68,12 @@ let listApp = new Vue({
             }
         },
         populateGames: async function() {
-            const gamesJsonUrl = `http://localhost:8766/games.json`;
+            const gamesWebroot = `http://localhost:8766`;
+            const gamesJsonUrl = `${gamesWebroot}/games.json`;
             this.games = await fetch(gamesJsonUrl).then(rsp => rsp.json());
+            this.games.forEach(game => {
+                game.thumb = `${gamesWebroot}/${game.thumb}`;
+            });
 		console.log(this.games)
         }
     },
