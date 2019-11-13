@@ -17,9 +17,6 @@
     <body>
         <div id="arcade-list-container">
 
-		<div class="banner">
-			<img src="openjam.svg" style="width: 300px">
-		</div>
 		<div class="game-wrapper" v-for="game in games" v-bind:class="{ banner: !!game.banner }">
 			<div class="banner" v-if="game.banner"><h2 v-html=game.banner></h2></div>
 			<pfe-card v-if="game.path" color=darkest style="height: 100%">
