@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-THIS_PATH=$(dirname $(realpath run.sh))
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-CORSPROXY_MAX_PAYLOAD=40485760 CORSPROXY_HOST=127.0.0.1 CORSPROXY_PORT=1234 $THIS_PATH/node_modules/.bin/corsproxy
-$THIS_PATH/node_modules/.bin/http-server -p 8765
+CORSPROXY_MAX_PAYLOAD=40485760 CORSPROXY_HOST=127.0.0.1 CORSPROXY_PORT=1234 $SCRIPTPATH/node_modules/.bin/corsproxy
+$SCRIPTPATH/node_modules/.bin/http-server -p 8765
