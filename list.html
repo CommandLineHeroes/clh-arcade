@@ -17,31 +17,32 @@
     <body>
         <div id="arcade-list-container">
 
-            <div class="pbp-article-list">
+		<div class="banner">
+			<img src="openjam.svg" style="width: 300px">
+		</div>
+		<div class="game-wrapper" v-for="game in games" v-bind:class="{ banner: !!game.banner }">
+			<div class="banner" v-if="game.banner"><h2 v-html=game.banner></h2></div>
+			<pfe-card v-if="game.path" color=darkest style="height: 100%">
+				<a pfe-overflow="top right left" v-if="game.thumb" tabindex="-1" v-on:click="nav" v-bind:data-href="game.path">
+					<img class="" v-bind:src="game.thumb">
+				</a>
+				<div slot="pfe-card--footer" class="msg">
+					<h1>{{ game.name }}</h1>
+					<p>by <a target=_blank v-bind:href="game.authorurl">{{ game.author }}</a></p>
+					<p v-if=game.placement><pfe-icon v-bind:class="{ place1: game.placement==1, place2: game.placement==2, place3: game.placement==3 }" icon="fas-trophy" size="2x"></pfe-icon> <b><pfe-number type="ordinal">{{ game.placement }}</pfe-number></b> place at Open Jam 2019</p>
+					<p v-html=game.msg></p>
+				</div>
+				<div slot="pfe-card--footer">
+					<div class="beside">
+						<p><pfe-cta><a target="_blank" v-bind:href="game.repo">VIEW SOURCE</a></pfe-cta> </pfe-cta></p>
+						<p><pfe-cta pfe-priority=primary><a v-on:click="nav" v-bind:data-href="game.path">PLAY</a></pfe-cta> </pfe-cta></p>
+					</div>
+				</div>
+			</pfe-card>
+		</div>
 
-                <div class="pbp-article-li" v-for="game in games">
-                    <a v-if="game.thumb" tabindex="-1" class="pbp-article-thumbnail" v-on:click="nav" v-bind:data-href="game.path">
-                        <div class="pbp-article-thumbnail">
-                            <div class="glass-card">
-                                <div class="glass-card-ratio">
-                                    <img class="glass-card-bg glass-card-bg-default" v-bind:src="game.thumb">
-                                    <div class="glass-card-border-outer"></div>
-                                    <div class="glass-card-border-inner"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div v-else class="msg" >
-			<h1>{{ game.title }}</h1>
-			<div v-html="game.msg"></div>
-                        <div class="glass-card-ratio"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <script type=module src="list.js"></script>
+	</div>
+	<script type=module src="list.js"></script>
     </body>
 </html>
 

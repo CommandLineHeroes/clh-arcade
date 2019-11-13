@@ -13,8 +13,8 @@ body::-webkit-scrollbar-thumb {
 .pbp-article-list {
     margin: 27px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(520px,1fr));
-    grid-auto-rows: auto;
+    grid-template-columns: 1fr; /*repeat(auto-fill,minmax(720px,1fr));*/
+    /*grid-auto-rows: auto;*/
     grid-gap: 27px;
     align-items: start;
 }
@@ -24,9 +24,9 @@ body::-webkit-scrollbar-thumb {
     }
 }
 .pbp-article-li {
-    /* display: grid; */
-    /* grid-template-columns: minmax(200px,1fr) 2fr; */
-    /* grid-template-rows: auto 1fr auto; */
+    display: grid;
+    grid-template-columns: minmax(400px,1fr) 2fr;
+    grid-template-rows: auto 1fr auto;
     grid-gap: 12px;
     height: 100%;
 }
