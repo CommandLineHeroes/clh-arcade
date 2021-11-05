@@ -5,9 +5,6 @@
   "bin": {
     "clh-arcade": "./run.js"
   },
-  "files": [
-    "dist/**/*"
-  ],
   "repository": "CommandLineHeroes/clh-arcade",
   "scripts": {
     "start": "node run.js",
