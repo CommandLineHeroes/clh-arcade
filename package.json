@@ -2,33 +2,25 @@
   "name": "clh-arcade",
   "version": "1.0.19",
   "description": "",
-  "main": "index.js",
   "bin": {
-    "clh-arcade": "./run.sh"
+    "clh-arcade": "./run.js"
   },
   "repository": "CommandLineHeroes/clh-arcade",
   "scripts": {
-    "start": "npm run proxy & http-server -p 8765",
-    "proxy": "CORSPROXY_MAX_PAYLOAD=40485760 CORSPROXY_HOST=127.0.0.1 CORSPROXY_PORT=1234 corsproxy",
+    "start": "node run.js",
     "http": "http-server -p 8765",
-    "dev": "browser-sync ./ -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.14"
-  },
   "dependencies": {
-    "@patternfly/pfelement": "1.0.0-prerelease.24",
     "@patternfly/pfe-card": "1.0.0-prerelease.24",
     "@patternfly/pfe-cta": "1.0.0-prerelease.24",
     "@patternfly/pfe-icon": "1.0.0-prerelease.24",
     "@patternfly/pfe-number": "1.0.0-prerelease.24",
-    "corsproxy": "^1.5.0",
-    "http-server": "^0.11.1",
-    "opn-cli": "^4.0.0",
+    "@patternfly/pfelement": "1.0.0-prerelease.24",
+    "http-server": "^0.11.2",
     "vue": "^2.6.4"
   }
 }

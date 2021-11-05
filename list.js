@@ -4,8 +4,6 @@ import "./node_modules/@patternfly/pfe-cta/pfe-cta.min.js";
 import "./node_modules/@patternfly/pfe-number/pfe-number.min.js";
 import "./node_modules/@patternfly/pfe-card/pfe-card.min.js";
 
-const gamesWebroot = `http://localhost:8766`;
-
 PfeIcon.addIconSet(
   "far",
   `icons/font-awesome/regular`,
@@ -70,10 +68,9 @@ let listApp = new Vue({
             }
         },
         populateGames: async function() {
-            const gamesJsonUrl = `${gamesWebroot}/games.json`;
-            this.games = await fetch(gamesJsonUrl).then(rsp => rsp.json());
+            this.games = await fetch('/games.json').then(rsp => rsp.json());
             this.games.forEach(game => {
-                game.thumb = `${gamesWebroot}/${game.thumb}`;
+                game.thumb = `/${game.thumb}`;
             });
 		console.log(this.games)
         }

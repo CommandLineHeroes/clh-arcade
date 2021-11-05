@@ -10,12 +10,6 @@ Then if you're deploying to a cab, run:
 
     npm start
 
-Or if you're developing, run:
-
-    npm run dev
-
-The only difference is that `dev` includes browser-sync.
-
 ## Step 1: create `games/`
 
 Create a symlink named `games` that points to a directory containing all the games.
