@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const corsProxy = require("cors-anywhere");
 const httpServer = require("http-server");
 
 const ARCADE_WEBROOT = __dirname;
