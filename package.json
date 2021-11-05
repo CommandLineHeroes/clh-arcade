@@ -9,6 +9,8 @@
   "scripts": {
     "start": "node run.js",
     "http": "http-server -p 8765",
+    "prepublishOnly": "npm run build",
+    "build": "esbuild --minify --bundle --outdir=dist arcade.js list.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,5 +24,8 @@
     "@patternfly/pfelement": "1.0.0-prerelease.24",
     "http-server": "^0.11.2",
     "vue": "^2.6.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.12"
   }
 }

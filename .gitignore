@@ -2,3 +2,4 @@ node_modules
 .idea
 games
 games.json
+dist
