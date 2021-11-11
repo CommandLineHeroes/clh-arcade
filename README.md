@@ -46,5 +46,15 @@ Each game object has:
  - `path` - the path to the game, for example `games/foo/` or `games/MyGame/MyGame.html`
  - `thumb` - the path to the thumbnail (does not have to be inside `games/`)
 
+## If you want to run non-browser games 
+1. Copy onto the laptop the games you want to run.  This directory should include a `games.json` file, all the games assets, and the `.desktop` files for each game.
+1. copy the `.desktop` files to `~/.local/share/applications/`
+1. run the register-mimetypes script (this should be bundled with the games)
+   ```
+   bash register-mimetypes.sh
+   ```
+1. run `sudo update-desktop-database` to create launchers for each game
+1. `cd` into the same folder as the `games.json` file
+1. run `clh-arcade`
 
 That should do it!  Enjoy and post issues if anything doesn't work.
