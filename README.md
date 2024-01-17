@@ -45,6 +45,9 @@ Each game object has:
  - `name` - the name of the game (not used right now, but may well be needed)
  - `path` - the path to the game, for example `games/foo/` or `games/MyGame/MyGame.html`
  - `thumb` - the path to the thumbnail (does not have to be inside `games/`)
+ - `repo` - a URL to the code repository
+ - `author` - the names of the authors
+ - `msg` - a brief, one or two sentence summary of the game.
 
 ## If you want to run non-browser games 
 1. Copy onto the laptop the games you want to run.  This directory should include a `games.json` file, all the games assets, and the `.desktop` files for each game.
