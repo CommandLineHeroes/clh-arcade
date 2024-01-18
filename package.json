@@ -22,7 +22,7 @@
     "@patternfly/pfe-icon": "1.0.0-prerelease.24",
     "@patternfly/pfe-number": "1.0.0-prerelease.24",
     "@patternfly/pfelement": "1.0.0-prerelease.24",
-    "http-server": "^0.11.2",
+    "http-server": "^14.1.1",
     "vue": "^2.6.4"
   },
   "devDependencies": {
